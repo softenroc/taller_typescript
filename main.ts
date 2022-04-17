@@ -47,15 +47,18 @@ function mostrarEstadisticas(aprendiz: Aprendiz):void{
 
 function mostraCursosAprendiz(cursos: Curso[]):void{
     let cursosTbody: HTMLElement = document.createElement("tbody");
+    let estado: string[] =  cursos.map(c=>(c.calificacion>60)?'green':'red');
+    let index: number = 0;
     for(let curso of cursos)
     {
         let trElement: HTMLElement =  document.createElement("tr");
         trElement.innerHTML=`<td>${curso.nombre}</td>
         <td>${curso.horas}</td>
-        <td>${curso.calificacion}</td>
+        <td style="color:${estado[index]}">${curso.calificacion}</td>
         <td>${curso.esCertificado()}</td>
         <td>${curso.anio}</td>`;
         cursosTbody.appendChild(trElement);
+        index++;
     }
     cursosTable.appendChild(cursosTbody);
 }
