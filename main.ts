@@ -1,3 +1,5 @@
-import { Aprendiez, NivelEducativo } from "./aprendiz";
+import { Aprendiz, NivelEducativo } from "./aprendiz.js";
 
-export const ap = new Aprendiez("Dario Fernando", "Rojas", "avatar.png", 37, NivelEducativo.POSGRADO);
+export const ap = new Aprendiz("Dario Fernando", "Rojas", "avatar.png", 37, NivelEducativo.POSGRADO);
+
+console.log(ap);
