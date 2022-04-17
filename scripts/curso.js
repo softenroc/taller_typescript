@@ -6,6 +6,12 @@ var Curso = /** @class */ (function () {
         this.certificado = certificado;
         this.anio = anio;
     }
+    Curso.prototype.esCertificado = function () {
+        if (this.certificado) {
+            return "Certificado";
+        }
+        return "No Certificado";
+    };
     return Curso;
 }());
 export { Curso };

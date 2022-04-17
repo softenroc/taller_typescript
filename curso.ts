@@ -3,5 +3,12 @@ export class Curso{
     {
 
     }
+    
+    public esCertificado():string{
+        if(this.certificado){
+            return "Certificado";
+        }
+        return "No Certificado";
+    }
 }
 
